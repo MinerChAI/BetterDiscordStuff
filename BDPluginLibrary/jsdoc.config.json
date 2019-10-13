@@ -1,0 +1,32 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "opts": {
+    "template": "node_modules/foodoc/template",
+    "destination": "./docs",
+    "readme": "./DOCS.md"
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    },
+    "path": "ink-docstrap",
+    "theme": "cerulean",
+    "navType": "vertical",
+    "linenums": true,
+    "dateFormat": "MMMM Do YYYY, h:mm:ss a",
+	"systemName": "Zere's Plugin Library",
+    "systemSummary": "A set of helpful utilities and tools for BD plugins.",
+    "copyright": "Copyright © 2018 Zack Rauen"
+  },
+  "source": {
+    "includePattern": ".+.js(doc)?$",
+    "excludePattern": "(^|/|\\\\)_"
+    }
+}
