@@ -8,8 +8,8 @@
         }],
         "version": "0.0.1",
         "description": "A plugin to switch your codeblocks themes",
-        "github": "https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/CodeThemes.plugin.js",
-        "github_raw": "https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/CodeThemes.plugin.js"
+        "github": "https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/plugins/CodeThemes.plugin.js",
+        "github_raw": "https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/plugins/CodeThemes.plugin.js"
     },
     "main": "index.js"
 }

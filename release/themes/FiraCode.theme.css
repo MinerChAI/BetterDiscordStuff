@@ -1,0 +1,7 @@
+//META{"name":"FiraCode","website":"https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/themes/FiraCode.theme.css","source":"https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/themes/FiraCode.theme.css","author":"dev-cats","version":"0.0.1","description":"Adds Fira Code font to code blocks and css editor"}*//
+
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css");
+
+.hljs, .ace_editor{
+  font-family: 'Fira Code';
+}

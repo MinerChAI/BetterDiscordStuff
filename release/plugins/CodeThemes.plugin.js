@@ -1,4 +1,4 @@
-//META{"name":"CodeThemes","displayName":"CodeThemes","website":"https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/CodeThemes.plugin.js","source":"https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/CodeThemes.plugin.js"}*//
+//META{"name":"CodeThemes","displayName":"CodeThemes","website":"https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/plugins/CodeThemes.plugin.js","source":"https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/plugins/CodeThemes.plugin.js"}*//
 /*@cc_on
 @if (@_jscript)
 	
@@ -31,7 +31,7 @@ var CodeThemes = (() => {
 			catch(err) {reject(err);}
 		});
 	});
-	const config = {"info":{"name":"CodeThemes","authors":[{"name":"Mr_ChAI","discord_id":"426757590022881290","github_username":"MinerChAI"}],"version":"0.0.1","description":"A plugin to switch your codeblocks themes","github":"https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/CodeThemes.plugin.js","github_raw":"https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/CodeThemes.plugin.js"},"main":"index.js"};
+	const config = {"info":{"name":"CodeThemes","authors":[{"name":"Mr_ChAI","discord_id":"426757590022881290","github_username":"MinerChAI"}],"version":"0.0.1","description":"A plugin to switch your codeblocks themes","github":"https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/plugins/CodeThemes.plugin.js","github_raw":"https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/plugins/CodeThemes.plugin.js"},"main":"index.js"};
 	const compilePlugin = ([Plugin, Api]) => {
 		const plugin = (Plugin, Library) => {
   const {Patcher, Logger, Settings} = Library;
@@ -42,6 +42,7 @@ var CodeThemes = (() => {
       xmlHttp.send(null);
       return xmlHttp.responseText;
     }
+
     constructor() {
       super();
       this.defaultSettings = {};
@@ -60,12 +61,11 @@ var CodeThemes = (() => {
       }
       var files = JSON.parse(this.httpGet(url)).tree;
       Logger.log(files);
-      var names = {monokai: "Monokai"};
       this.options = [];
       var file;
       for (var i = 0; i < files.length; ++i) {
         file = files[i].path;
-        if (file.endsWith(".css")) this.options.push({label: (file in names? names[file] : file.slice(0, -4)), value: file});
+        if (file.endsWith(".css")) this.options.push({label: file.slice(0, -4), value: file});
       }
     }
 

@@ -7,6 +7,7 @@ module.exports = (Plugin, Library) => {
       xmlHttp.send(null);
       return xmlHttp.responseText;
     }
+
     constructor() {
       super();
       this.defaultSettings = {};
@@ -25,12 +26,11 @@ module.exports = (Plugin, Library) => {
       }
       var files = JSON.parse(this.httpGet(url)).tree;
       Logger.log(files);
-      var names = {monokai: "Monokai"};
       this.options = [];
       var file;
       for (var i = 0; i < files.length; ++i) {
         file = files[i].path;
-        if (file.endsWith(".css")) this.options.push({label: (file in names? names[file] : file.slice(0, -4)), value: file});
+        if (file.endsWith(".css")) this.options.push({label: file.slice(0, -4), value: file});
       }
     }
 
