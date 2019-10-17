@@ -1,0 +1,15 @@
+{
+    "info": {
+        "name": "CodeThemes",
+        "authors": [{
+            "name": "Mr_ChAI",
+            "discord_id": "426757590022881290",
+            "github_username": "MinerChAI"
+        }],
+        "version": "0.0.1",
+        "description": "A plugin to switch your codeblocks themes",
+        "github": "https://github.com/dev-cats/BetterDiscordStuff/blob/master/release/CodeThemes.plugin.js",
+        "github_raw": "https://raw.githubusercontent.com/dev-cats/BetterDiscordStuff/master/release/CodeThemes.plugin.js"
+    },
+    "main": "index.js"
+}
